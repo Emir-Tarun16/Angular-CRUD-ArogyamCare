@@ -1,0 +1,46 @@
+ <!-- Start Page Title Area -->
+ <section class="page-title-area page-title-bg4">
+  <div class="d-table">
+      <div class="d-table-cell">
+          <div class="container">
+              <div class="page-title-content">
+                  <h2> Services</h2>
+                  <ul>
+                      <li>Home</li>
+                      <li>Service</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End Page Title Area -->
+<h1 class="text-center mt-4">Update Your Service </h1>
+<div class="container mt-4">
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Your Service  Have been Updated !!
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+<form [formGroup]="editResto"  (ngSubmit)="collection()">
+    <div class="form-group">
+      <label for="exampleInputEmail1"><strong>Service Name</strong></label>
+      <input type="text" class="form-control" formControlName="name"
+        placeholder="Enter Service name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1"><strong>Department</strong></label>
+        <input type="text" class="form-control"  formControlName="address"
+         placeholder="Enter  Service Department ">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1"><strong>Duration</strong></label>
+        <input type="email" class="form-control"  formControlName="email"
+         placeholder="Enter  Service Duration">
+      </div>
+    <button type="submit" class="btn btn-success mb-5">Update</button>
+</form>
+</div>
+<app-footer></app-footer>

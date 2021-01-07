@@ -1,0 +1,49 @@
+<!-- Start Page Title Area -->
+<section class="page-title-area page-title-bg4">
+  <div class="d-table">
+      <div class="d-table-cell">
+          <div class="container">
+              <div class="page-title-content">
+                  <h2> Services</h2>
+                  <ul>
+                      <li>Home</li>
+                      <li>Our Service</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End Page Title Area -->
+<h1 class="text-center mt-4"><strong>Know Your Services Here !!</strong></h1>
+<div class="container">
+<table class="table mt-5 mb-5">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Service Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Opration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th>{{item.id}}</th>
+        <th>{{item.name}}</th>
+        <th>{{item.address}}</th>
+        <th>{{item.email}}</th>
+        <th><i  (click)="deleteResto(item.id)" 
+          class="fa fa-trash" style="font-size:27px;color:red;"></i>
+          &nbsp;  &nbsp;
+          <a routerLink="/update/{{item.id}}"><i  class="fa fa-edit" 
+            style="font-size:27px;color:blue;"></i></a>
+        </th>
+      </tr>
+     
+    </tbody>
+  </table>
+</div >
+<app-footer></app-footer>
+  
+  
